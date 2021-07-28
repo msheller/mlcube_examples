@@ -8,4 +8,5 @@ mlcube_spec_version: 0.1.0
 
 tasks:
   - 'tasks/download.yaml'
+  - 'tasks/evaluate.yaml'
   - 'tasks/train.yaml'
