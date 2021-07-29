@@ -130,7 +130,8 @@ def train(task_args: List[str]) -> None:
     
     with open(args.metrics, 'w') as f:
         data_json = {'loss'     : str(history.history["loss"][-1]),
-                     'accuracy' : str(history.history["accuracy"][-1])}
+                     'accuracy' : str(history.history["accuracy"][-1]),
+                     'num_examples': str(x_train.shape[0])}
         json.dump(data_json, f)
 
     os.makedirs(args.model_dir, exist_ok=True)
@@ -170,7 +171,9 @@ def evaluate(task_args: List[str]) -> None:
     
     with open(args.metrics, 'w') as f:
         data_json = {'loss'     : str(eval_result[0]),
-                     'accuracy' : str(eval_result[1])}
+                     'accuracy' : str(eval_result[1]),
+                     'num_examples': str(x_train.shape[0])}
+
         json.dump(data_json, f)
         
     logger.info("Model has been evaluated.")
