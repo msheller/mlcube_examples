@@ -8,7 +8,7 @@ input_binding: {}
 input_binding:
         data_dir: $WORKSPACE/data
         parameters_file: $WORKSPACE/parameters/default.parameters.yaml
-        model_in: $WORKSPACE/model
+        model_in: $WORKSPACE/model_in
 
 output_binding:
         metrics: $WORKSPACE/metrics/evaluate_metrics.json

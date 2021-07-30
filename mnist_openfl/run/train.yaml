@@ -6,9 +6,9 @@ task_name: train
 input_binding:
         data_dir: $WORKSPACE/data
         parameters_file: $WORKSPACE/parameters/default.parameters.yaml
-        model_in: $WORKSPACE/model
+        model_in: $WORKSPACE/model_in
 
 output_binding:
         log_dir: $WORKSPACE/train_logs
         metrics: $WORKSPACE/metrics/train_metrics.json
-        model_dir: $WORKSPACE/model
+        model_dir: $WORKSPACE/model_out
